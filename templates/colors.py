@@ -6,4 +6,3 @@ grey = colorama.Fore.LIGHTBLACK_EX
 reset = colorama.Fore.RESET
 blue = colorama.Fore.BLUE
 red = colorama.Fore.RED
-

@@ -1,0 +1,16 @@
+document.write
+window.location
+document.cookie
+eval
+document.domain
+WebSocket
+.src
+postMessage
+setRequestHeader
+FileReader.readAsText
+ExecuteSql
+sessionStorage.setItem
+document.evaluate
+JSON.parse
+.setAttribute
+RegExp
