@@ -10,8 +10,8 @@ def banner(blue,reset):
                         (  /   )    
                         \(_)__))    
                     THOMAS THE CAT 
-                                - th3h04x   
-    ''',end="")
+                                - th3h04x
+''',end="")
     print(reset,end="")
 
 

@@ -8,10 +8,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="DOM XSS SCANNER")
     parser.add_argument('-u','--url',help='target url',dest='url')
     parser.add_argument('-f','--file',help='enter a file containg urls' , dest='file')
+    parser.add_argument('-t' , '--threads',type=int,help="enter the threads [default 3]",dest='Threads',default=3)
+    
     args = parser.parse_args()
 
     url = args.url
     urls_file = args.file
+    Threads = args.Threads
+ 
     if not url and not urls_file:
         print(f"{red}[-]ENTER A VALID INPUT[-] \n TRY python3 jodom.py --help{reset}")
         quit()
@@ -24,13 +28,17 @@ if __name__ == '__main__':
         except FileNotFoundError:
             print("[-]ENTER A VALID FILE CONTAING URLS[-]")
             quit()
-            
-    if url:
-        get_all_js_links(url)
-    if urls:
-        for url in urls:
+    try:        
+        if url:
             get_all_js_links(url)
+        if urls:
+            for url in urls:
+                get_all_js_links(url)
+    except:
+        print(f"[-]SOMETHING WENT WRONG : ( {red}\n[check your internet connection]{reset}")
 
     for url in internal_urls:
-        print(f"{grey}[+]POSSIBLE JS URLS --->{green}{url}{reset}")
-    xss_finder()
+        print(f"{grey}[+]POSSIBLE JS INTERNAL URLS --->{green}{url}{reset}")
+    
+    xss_finder(Threads)
+

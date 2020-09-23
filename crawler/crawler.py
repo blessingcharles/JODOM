@@ -1,11 +1,12 @@
 from urllib.request import urlparse , urljoin
 from bs4 import BeautifulSoup
 import requests 
+import concurrent.futures
 from re import search
 from templates.headers import headers
 from templates.colors import red , reset , green , grey
-external_urls = set()
-internal_urls = set()
+external_urls = []
+internal_urls = []
 sources = []
 sinks = []
 
@@ -26,14 +27,14 @@ def get_all_js_links(url):
             continue
         script_url = urljoin(url,script_url)
         if domain_name not in urlparse(script_url).netloc:
-            external_urls.add(script_url)
+            external_urls.append(script_url)
             continue
         
-        internal_urls.add(script_url)
-    internal_urls.add(url)
+        internal_urls.append(script_url)
+    internal_urls.append(url)
 
 def checker(url):
-    r = requests.get(url)
+    r = requests.get(url,headers=headers)
     for source in sources:
         if search(source,r.text) :
             print(f"{red}[source] = {source} ---> {green}{url}{reset}")
@@ -43,10 +44,11 @@ def checker(url):
             print(f"{red}[sinks] = {sink} ---> {green}{url}{reset}")
 
 
-def xss_finder():
+def xss_finder(Threads):
     source_sinks()       
-    for url in internal_urls :        
-        checker(url)
+    with concurrent.futures.ThreadPoolExecutor(max_workers=Threads) as executor:
+        executor.map(checker,internal_urls)        
+        
 
 
 
