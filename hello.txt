@@ -1,0 +1,17 @@
+https://idealhomeappliances.com/catalog/view/theme/mahardhi/stylesheet/whatsapp/jquery-3.3.1.min.js
+https://idealhomeappliances.com/catalog/view/theme/mahardhi/stylesheet/whatsapp/floating-wpp.js
+https://idealhomeappliances.com/catalog/view/javascript/bootstrap/js/bootstrap.min.js
+https://idealhomeappliances.com/catalog/view/javascript/mahardhi/jquery.elevateZoom.min.js
+https://idealhomeappliances.com/catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js
+https://idealhomeappliances.com/catalog/view/javascript/mahardhi/quickview.js
+https://idealhomeappliances.com/catalog/view/javascript/mahardhi/owl.carousel.min.js
+https://idealhomeappliances.com/catalog/view/javascript/mahardhi/lightbox-2.6.min.js
+https://idealhomeappliances.com/catalog/view/javascript/mahardhi/mahardhi_search.js
+https://idealhomeappliances.com/catalog/view/javascript/jquery/swiper/js/swiper.jquery.js
+https://idealhomeappliances.com/catalog/view/javascript/mahardhi/tabs.js
+https://idealhomeappliances.com/catalog/view/javascript/supermenu/supermenu-responsive.js?v=30
+https://idealhomeappliances.com/catalog/view/javascript/supermenu/jquery.hoverIntent.minified.js
+https://idealhomeappliances.com/catalog/view/javascript/common.js
+https://idealhomeappliances.com/catalog/view/javascript/mahardhi/jquery-ui.min.js
+https://idealhomeappliances.com/catalog/view/javascript/mahardhi/custom.js
+https://idealhomeappliances.com
